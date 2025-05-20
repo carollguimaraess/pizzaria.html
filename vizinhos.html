@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        while (true) {
+            let numeroCasa = parseInt(prompt("Coloque o numero da sua casa"));
+        
+
+        if (isNan(numeroCasa)) {
+            alert("Coloque um numero valido!");
+        } else {
+            break;
+        }
+        let casaAnterior = numeroCasa - 1;
+        let casaPosterior = numeroCasa + 1;
+
+        alert("O numero da minha casa é" + numeroCasa+ 
+        ", já meu vizinho anterior tem a casa de numero" +casaAnterior+ 
+        ", enquanto meu vizinho posterior mora na casa de numero"+casaPosterior);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
