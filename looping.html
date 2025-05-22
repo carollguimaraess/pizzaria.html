@@ -9,6 +9,9 @@
 
 <body>
     <script>
+        let resposta = prompt("Digite sim para acessar a calculadora.");
+
+        while (resposta == "sim") {
 
             let operador = prompt("Escolha uma operação: +, -, *, /");
             let numero1 = parseInt(prompt("Coloque o primeiro valor."));
@@ -31,8 +34,8 @@
                 default:
                     resultado = "Operador inválido.";
             }
-        
-    
+        }
+        prompt("Digite sim para continuar na calculadora")
         alert("O resultado é" + resultado);
     </script>
 </body>

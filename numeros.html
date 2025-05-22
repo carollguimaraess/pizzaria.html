@@ -9,11 +9,12 @@
 
 <body>
     <script>
-        let numero = parseInt(prompt("Digite um número inteiro positivo"));
-        for (i = numero; i <= 100; i++) {
-            alert(i)
+        let numero = parseInt(prompt("Digite um número para calcular a soma de 1 até ele"));
+        let soma = 0;
+        for (i = 1; i <= numero; i++) {
+            soma += i;
         }
-
+        alert("A soma de 1 ate" + numero + "é" + soma);
     </script>
 </body>
 
