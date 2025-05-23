@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numero1, numero2, operacao, total;
+
+        do {
+            numero1 = parseInt(prompt("Digite o primeiro numero"));
+            numero2 = parseInt(prompt("Digite o segundo número"));
+            operacao = parseInt(prompt("Escolha a operação aritmetica que deseja realizar: \n1. Adição \n2. Subtração \n3. Multiplicação \n4. Divisão"));
+            switch (operacao) {
+                case 1:
+                    total = numero1 + numero2;
+                    break;
+                case 2:
+                    total = numero1 - numero2;
+                    break;
+                case 3:
+                    total = numero1 * numero2;
+                    break;
+                case 4: total = numero1 / numero2;
+                    break;
+                default:
+                    alert("Você não selecionou uma opção válida.");
+                    break;
+            }
+            alert ("O resultado do seu calculo é" +total);
+            continuar= parseInt(prompt("Digit 1, caso queira continuar calculando "))
+
+        } while(continuar == 1);
+    </script>
+</body>
+
+</html>

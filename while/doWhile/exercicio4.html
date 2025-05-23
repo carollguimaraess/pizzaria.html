@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numero, continuar;
+        do {
+            numero=parseInt(prompt("Digite um numero para ser avaliado"));
+            if(numero % 2==0){
+                alert(numero+ "é um numero par.");
+            } else{
+                alert(numero+ "é um numero impar.");
+            }
+            continuar=prompt("Entre com s para continuar");
+        } while (continuar == "s" || continuar =="S");
+    </script>
+</body>
+
+</html>
