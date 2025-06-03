@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calcularDiasDeVida() {
+            let idade = parseInt(prompt("Qual sua idade?"));
+            if (isNaN(idade) || idade < 0) {
+                alert("Por favor, insira uma idade válida.");
+                return;
+            }
+
+            let dias = idade * 365;
+            alert("Você tem aproximadamente " + dias + " dias de vida.");
+        }
+
+        calcularDiasDeVida(); 
+    </script>  
+    
+
+</body>
+
+</html>
