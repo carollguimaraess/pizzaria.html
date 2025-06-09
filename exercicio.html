@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let menu = parseInt(prompt("Menu \n1: Chocolate - R$4,90\n2: Açucar -R$4,30\n3: Nescau- R$7,99\n4: Massa de bolo - R$9,90\n5: Leite condensado - R$4,90\n6: Refrigerante - R$6,00"));
+        let nomeProduto = (prompt(" Qual o produto que deseja comprar"));
+        let quantidade = parseInt(prompt("Qual a quantidade desejada"));
+        let precoUnitario;
+        let precoTotal;
+
+
+        switch (menu) {
+            case "1":
+                quantidade = parseInt(prompt("Digite a quantidade desejada"));
+                nomeProduto = "Chocolate";
+                valorUnitario = 4.90;
+                break;
+
+            case "2":
+                quantidade = parseInt(prompt("Digite a quantidade desejada"));
+                precoUnitario = 4.30;
+                precoTotal = precoUnitario * quantidade;
+                alert("Voce comprou" + quantidade + "Açucar, pagando o valor de R$" + preçoTotal.tofixed(2));
+                break;
+            case "3":
+                quantidade = parseInt(prompt("Digite a quantidade desejada"));
+                precoUnitario = 7.99;
+                precoTotal = precoUnitario * quantidade;
+                alert("Voce comprou" + quantidade + "Nescau, pagando o valor de R$" + preçoTotal.tofixed(2));
+                break;
+            case "4":
+                quantidade = parseInt(prompt("Digite a quantidade desejada"));
+                precoUnitario = 9.90;
+                precoTotal = precoUnitario * quantidade;
+                alert("Voce comprou" + quantidade + "Massa de bolo, pagando o valor de R$" + preçoTotal.tofixed(2));
+                break;
+            case "5":
+                quantidade = parseInt(prompt("Digite a quantidade desejada"));
+                precoUnitario = 4.90;
+                precoTotal = precoUnitario * quantidade;
+                alert("Voce comprou" + quantidade + "Leite condensado, pagando o valor de R$" + preçoTotal.tofixed(2));
+                break;
+
+            case "6":
+                quantidade = parseInt(prompt("Digite a quantidade desejada"));
+                precoUnitario = 6.00;
+                precoTotal = precoUnitario * quantidade;
+                alert("Voce comprou" + quantidade + "Refrigerante, pagando o valor de R$" + preçoTotal.tofixed(2));
+                break;
+                
+        }
+        alert()
+        
+
+    </script>
+</body>
+
+</html>

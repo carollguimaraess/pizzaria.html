@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    let continuar;
+    
+    do {
+    
+        let menu = prompt("Menu \n1: Chocolate - R$4,90\n2: Açúcar - R$4,30\n3: Nescau - R$7,99\n4: Massa de bolo - R$9,90\n5: Leite condensado - R$4,90\n6: Refrigerante - R$6,00");
+
+    
+        let nomeProduto = "";
+        let valorUnitario = 0;
+        let quantidade = 0;
+        let valorTotal = 0;
+
+        
+        switch (menu) {
+            case "1":
+                nomeProduto = "Chocolate";
+                valorUnitario = 4.90;
+                break;
+            case "2":
+                nomeProduto = "Açúcar";
+                valorUnitario = 4.30;
+                break;
+            case "3":
+                nomeProduto = "Nescau";
+                valorUnitario = 7.99;
+                break;
+            case "4":
+                nomeProduto = "Massa de bolo";
+                valorUnitario = 9.90;
+                break;
+            case "5":
+                nomeProduto = "Leite condensado";
+                valorUnitario = 5.90;
+                break;
+            case "6":
+                nomeProduto = "Refrigerante";
+                valorUnitario = 6.00;
+                break;
+            default:
+                alert("Opção inválida! Tente novamente.");
+                continue; 
+        }
+
+        
+        quantidade = parseInt(prompt(`Digite a quantidade de "${nomeProduto}" desejada:`));
+        valorTotal = quantidade * valorUnitario;
+
+
+        alert("Produto comprado com sucesso!\n" +
+            "Produto: " + nomeProduto + "\n" +
+            "Quantidade: " + quantidade + "\n" +
+            "Valor unitário: R$" + valorUnitario.toFixed(2) + "\n" +
+            "Valor total: R$" + valorTotal.toFixed(2));
+
+        continuar = prompt("Deseja comprar outro produto? (sim/não)").toLowerCase();
+
+    } while (continuar === "sim" || continuar === "s");
+
+    alert("Obrigado pela compra!");
+</script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let produto, quantidade, valorUnitario, valorTotal;
+        do {
+            produto = prompt("Nome do produto");
+            quantidade = parseInt(prompt("Quantidade de produto"));
+            valorUnitario = parseFloat(prompt("Valor unitário do produto"));
+            valorTotal = quantidade * valorUnitario;
+
+            alert(`O Cliente adquiriu ${quantidade} unidades do produto ${produto} ao preço unitário de R$${valorUnitario.toFixed(2)}, com o total de R$${valorTotal.toFixed(2)}`);
+
+            continuar = prompt("Digite s se deseja continuar comprando");
+        } while (continuar === "sim" || continuar === "s");
+
+    </script>
+</body>
+
+</html>
