@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja de Produtos</title>
+    <style>
+        :root {
+            --cor-primaria: rgb(138, 74, 138);
+            --cor-secundaria: #ffffff;
+            --cor-destaque: #333333;
+            --espacamento: 1rem;
+            --largura-max: 900px;
+            --fonte-principal: 'Arial', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fonte-principal);
+            background-color: #f4f4f4;
+            color: var(--cor-destaque);
+            line-height: 1.6;
+        }
+
+        header,
+        footer {
+            background: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            padding: var(--espacamento);
+            text-align: center;
+        }
+
+        main {
+            max-width: var(--largura-max);
+            margin: var(--espacamento) auto;
+            padding: var(--espacamento);
+            background-color: var(--cor-secundaria);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            margin-bottom: var(--espacamento);
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: 2px dashed #000;
+            outline-offset: 3px;
+        }
+
+        section.produtos ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--espacamento);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        @media (max-width: 600px) {
+            section.produtos ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Loja de Produtos</h1>
+        <p>Escolha um produto para comprar</p>
+    </header>
+
+    <main>
+        <section class="produtos" aria-label="Lista de produtos disponíveis">
+            <h2>Produtos</h2>
+            <ul>
+                <li><button aria-label="Comprar Chocolate" onclick="comprarProduto(1)">Chocolate - R$4,90</button></li>
+                <li><button aria-label="Comprar Açúcar" onclick="comprarProduto(2)">Açúcar - R$4,30</button></li>
+                <li><button aria-label="Comprar Nescau" onclick="comprarProduto(3)">Nescau - R$7,99</button></li>
+                <li><button aria-label="Comprar Massa de bolo" onclick="comprarProduto(4)">Massa de bolo -
+                        R$9,90</button></li>
+                <li><button aria-label="Comprar Leite condensado" onclick="comprarProduto(5)">Leite condensado -
+                        R$5,90</button></li>
+                <li><button aria-label="Comprar Refrigerante" onclick="comprarProduto(6)">Refrigerante - R$6,00</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Loja de Produtos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function comprarProduto(opcao) {
+            let nomeProduto = "";
+            let valorUnitario = 0;
+
+            switch (opcao) {
+                case 1:
+                    nomeProduto = "Chocolate";
+                    valorUnitario = 4.90;
+                    break;
+                case 2:
+                    nomeProduto = "Açúcar";
+                    valorUnitario = 4.30;
+                    break;
+                case 3:
+                    nomeProduto = "Nescau";
+                    valorUnitario = 7.99;
+                    break;
+                case 4:
+                    nomeProduto = "Massa de bolo";
+                    valorUnitario = 9.90;
+                    break;
+                case 5:
+                    nomeProduto = "Leite condensado";
+                    valorUnitario = 5.90;
+                    break;
+                case 6:
+                    nomeProduto = "Refrigerante";
+                    valorUnitario = 6.00;
+                    break;
+                default:
+                    alert("Produto inválido");
+                    return;
+            }
+
+            const quantidade = parseInt(prompt(`Digite a quantidade de "${nomeProduto}" desejada:`));
+            if (isNaN(quantidade) || quantidade <= 0) {
+                alert("Quantidade inválida.");
+                return;
+            }
+
+            const valorTotal = quantidade * valorUnitario;
+
+            alert(`Produto comprado com sucesso!
+Produto: ${nomeProduto}
+Quantidade: ${quantidade}
+Valor unitário: R$${valorUnitario.toFixed(2)}
+Valor total: R$${valorTotal.toFixed(2)}`);
+        }
+    </script>
+
+</body>
+
+</html>
